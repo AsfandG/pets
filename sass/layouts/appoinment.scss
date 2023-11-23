@@ -1,0 +1,53 @@
+.appointment {
+    padding: 4.8rem 2rem;
+    @include respond(tab-port2) {
+width: 100%;    }
+    &__heading {
+        font-size: 1.2rem;
+        margin-bottom: 3rem;
+        color: $pink;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        font-weight: 900;
+        text-align: center;
+    }
+
+    &__form {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+        @include respond(tab-port2) {
+            flex-direction: column;
+        }
+
+        &-item {
+            max-width: 25%;
+            width: 100%;
+            padding: 0 1.5rem;
+            margin-bottom: 1.6rem;
+            @include respond(tab-port2) {
+                max-width: 100%;    }
+        }
+
+        &-control {
+            border: 1px solid rgba(0, 0, 0, 0.1);
+            height: 5.4rem;
+            padding: 1rem 1.5rem;
+            color: rgba(0, 0, 0, 0.5);
+            font-size: 1.6rem;
+            border-radius: 0;
+            resize: none;
+            width: 100%;
+
+            &:focus {
+                outline: none;
+            }
+        }
+
+        &-btn {
+            width: 100%;
+            height: 100%;
+        }
+    }
+}

@@ -1,0 +1,101 @@
+.groomer {
+    width: 100%;
+    padding: 11rem 0;
+
+    &__text {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 4.8rem;
+    }
+
+    &__cardSection {
+        display: flex;
+        gap: 1.5rem;
+        flex-wrap: wrap;
+        justify-content: center;
+        @include respond(tab-port) {
+            gap: 4rem;
+        }
+
+        &--card {
+            max-width: 23%;
+            width: 100%;
+            transition: all .1s;
+
+            @include respond(tab-port) {
+                max-width: 40%;
+            }
+
+            @include respond(tab-port3) {
+                max-width: 100%;
+            }
+
+            &-img {
+                display: flex;
+                justify-content: center;
+
+                &-content {
+                    height: 20rem;
+                    width: 20rem;
+                    display: block;
+                    background-position: top center;
+                    transition: all 0.3s ease;
+                    position: relative;
+                    border-radius: 50%;
+                    border: 10px solid #f8f9fa;
+                }
+            }
+
+            &-content {
+                background: $white;
+                padding: 14rem 3rem 3rem 3rem;
+                transition: all 0.3s ease;
+                margin-top: -100px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+                &:hover {
+                    background-color: $green;
+                }
+
+                &:hover &-text {
+                    h3 {
+                        color: white;
+                    }
+
+                    span {
+                        color: $white;
+                    }
+                }
+
+                &:hover &-link {
+                    color: $green;
+                    background-color: $white;
+                }
+
+                &-text {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+
+                    h3 {
+                        font-size: 2rem;
+                        font-weight: 600;
+                        color: $black;
+                        margin-bottom: 1rem;
+                    }
+
+                    span {
+                        margin-bottom: 1rem;
+                    }
+                }
+
+                
+            }
+
+
+        }
+    }
+}

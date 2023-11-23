@@ -1,0 +1,116 @@
+.container {
+    max-width: 114rem;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+
+    @include respond(tab-land) {
+        max-width: 96rem;
+    }
+
+    @include respond(tab-port) {
+        max-width: 86rem;
+    }
+
+    @include respond(tab-port2) {
+        max-width: 76rem;
+    }
+
+    @include respond(tab-port3) {
+        max-width: 66rem;
+
+    }
+
+}
+
+a {
+    text-decoration: none;
+    color: $black;
+    font-size: 12px;
+}
+
+li,
+ul {
+    list-style: none;
+}
+
+.active {
+    color: $pink;
+    font-size: 1.5rem;
+    padding: 2.4rem 2rem;
+    font-weight: 500;
+
+    @include respond(tab-port) {
+        padding: 1.4rem 2rem;
+    }
+}
+
+.paragraph {
+    font-size: 1.7rem;
+    font-weight: 400;
+    color: $dark-grey;
+}
+
+.padding-t {
+    padding-top: 22.4rem;
+
+    @include respond(tab-port2) {
+        padding-top: 11.2rem;
+    }
+
+    @include respond(tab-port3) {
+        padding-top: 50rem;
+    }
+
+    @include respond(mobile) {
+        padding-top: 70rem;
+    }
+}
+
+.bg-light {
+    background-color: $bg-light;
+}
+
+.subHeading {
+    font-size: 1.4rem;
+    display: block;
+    margin-bottom: .5rem;
+    text-transform: uppercase;
+    color: $pink;
+    letter-spacing: 2px;
+    font-weight: 900;
+}
+
+.heading {
+    line-height: 1.2;
+    font-size: 4rem;
+    font-weight: 700;
+    color: $black;
+    margin-bottom: 2.4rem;
+   
+}
+
+.socialMedia__links {
+    display: flex;
+    gap: 1.5rem;
+
+    &--link {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 3.4rem;
+        height: 3.4rem;
+        background: $pink;
+        color: $white;
+        border-radius: 5px;
+        font-size: 1.7rem;
+    }
+}
+
+.open {
+    display: flex;
+    animation: slideIn .8s ease-in-out;
+
+}

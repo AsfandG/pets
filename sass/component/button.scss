@@ -1,0 +1,41 @@
+.btns {
+    display: flex;
+    gap: 1rem;
+    @include respond(tab-port3){
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+    &--btn {
+        font-size: 1.4rem;
+        border-radius: 7px;
+        padding: 1.4rem 2.2rem;
+        font-weight: 500;
+        @include respond(tab-port3){
+            padding: 1.8rem 2.2rem;
+            text-align: center;
+            font-size: 1.8rem;
+
+
+        }
+    }
+
+    &--primary {
+        background: $pink;
+        border: 1px solid $pink;
+        color: $white;
+
+    }
+
+    &--secondary {
+        background: $green ;
+        border: 1px solid $green ;
+        color: $white;
+        
+        transition: all .1s;
+        &:hover{
+            background-color: transparent;
+            color: $green;
+            border: 1px solid $green;
+        }
+    }
+}

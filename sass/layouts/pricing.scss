@@ -1,0 +1,115 @@
+.price {
+    width: 100%;
+    padding: 11rem 0;
+
+    &__text {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 6rem;
+        h2{
+            text-align: center;
+        }
+    }
+
+    &__cardSection {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 2rem;
+        width: 100%;
+
+        @include respond(tab-port) {
+            gap: 2.5rem;
+        }
+
+        &--card {
+            width: 23%;
+            border-radius: 7px;
+            overflow: hidden;
+            background-color: $white;
+            height: 100%;
+            content: "";
+
+            @include respond(tab-port) {
+                width: 40%;
+            }
+
+            @include respond(tab-port3) {
+                width: 100%;
+            }
+
+            &--img {
+                height: 20rem;
+                background-position: center;
+                background-size: cover;
+            }
+
+            &--content {
+                padding: 2.4rem;
+
+                a {
+                    justify-content: center;
+                }
+            }
+
+            &--subHeading {
+                color: $pink;
+                font-size: 2rem;
+                font-weight: 600;
+                text-transform: uppercase;
+                text-align: center;
+            }
+
+            &--price {
+                display: block;
+                text-align: center;
+
+                sup {
+                    position: relative;
+                    font-size: 2.4rem;
+                    top: -1em;
+                    vertical-align: baseline;
+
+                }
+
+                sub {
+                    font-size: 1.4rem;
+                    vertical-align: baseline;
+                }
+
+                span {
+                    font-size: 6rem;
+                    font-weight: 900;
+                    color: $pink;
+
+                }
+
+            }
+
+            &--points {
+                margin-bottom: 6rem;
+            }
+
+            &--point {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 1rem;
+                padding: 1rem 0;
+
+                i {
+                    font-size: 2rem;
+                    color: $pink;
+                }
+
+                span {
+                    font-size: 2rem;
+                    color: $black;
+                }
+            }
+
+
+        }
+    }
+}

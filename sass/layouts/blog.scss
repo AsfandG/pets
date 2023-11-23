@@ -1,0 +1,134 @@
+.blog {
+    padding: 11rem 0;
+    width: 100%;
+
+    &__text {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+        margin-bottom: 8rem;
+        h2{
+            text-align: center;
+        }
+    }
+
+    &__cardSection {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-gap: 4rem;
+        width: 100%;
+
+        @include respond(tab-port) {
+            grid-template-columns: 1fr;
+
+        }
+    }
+
+    &__card {
+        border-radius: 5px;
+
+        &--img {
+            overflow: hidden;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: top center;
+            height: 30rem;
+            width: 100%;
+
+        }
+
+        &--content {
+            display: flex;
+            background-color: $white;
+            padding: 2rem;
+            transition: all .1s;
+
+
+
+            &--left {
+                width: 16rem;
+                padding-right: 2.4rem;
+                @include respond(tab-land) {
+                    width: 11rem;
+                }
+                @include respond(tab-port) {
+                    width: 18rem;
+                }
+                
+
+                @include respond(mobile) {
+                    width: 12rem;
+                }
+
+                a {
+                    width: 100%;
+                    display: block;
+                    gap: 1rem;
+                    font-size: 1.4rem;
+                    color: $pink;
+                    text-align: end;
+
+                    i {
+                        margin-right: 1rem;
+                    }
+
+                    &:hover {
+                        color: $black;
+                    }
+
+                    @include respond(tab-port) {
+                        font-size: 2rem;
+                    }
+
+                    @include respond(mobile) {
+                        font-size: 1.6rem;
+                    }
+                }
+            }
+
+            &--right {
+                display: flex;
+                gap: 1.6rem;
+                flex-direction: column;
+                width: calc(100% - 16rem);
+                flex-grow: 1;
+
+                @include respond(tab-port) {
+                    width: calc(100% - 18rem);
+                }
+                @include respond(tab-land) {
+                    width: calc(100% - 11rem);
+                }
+                @include respond(mobile) {
+                    width: calc(100% - 12rem);
+                }
+                &--heading {
+                    font-size: 1.8rem;
+                    margin-bottom: 1.6rem;
+                    font-weight: 500;
+                    transition: all .1s;
+
+                    @include respond(tab-port) {
+                        font-size: 2rem;
+                    }
+
+                    &:hover {
+                        color: $pink;
+                    }
+                }
+
+                button {
+                    align-self: flex-start;
+                    padding: 1.4rem;
+                }
+
+                p {
+                    @include respond(tab-port) {
+                        font-size: 2rem;
+                    }
+                }
+            }
+        }
+    }
+}

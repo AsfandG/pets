@@ -1,0 +1,466 @@
+.header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 2;
+    height: 100vh;
+
+
+    &__topNav {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        font-size: 1.2rem;
+        font-weight: 700;
+        width: 100%;
+        padding: 1rem 2rem;
+
+        @include respond(tab-port) {
+            display: none;
+        }
+
+        &--contact {
+            display: flex;
+            align-items: center;
+            flex-grow: 1;
+
+        }
+
+        &--socialMedia {
+            display: flex;
+            align-items: center;
+            justify-content: end;
+            flex-grow: 1;
+
+            &--links {
+                display: flex;
+                align-items: center;
+                gap: 0.7rem;
+            }
+
+            &--link {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 3rem;
+                height: 3rem;
+                background: $white;
+                color: $black;
+                border-radius: 50%;
+                transition: all .1s;
+
+                &:hover {
+                    color: $white;
+                    background-color: $pink;
+                }
+
+                i {
+                    font-size: 1.5rem;
+                }
+            }
+
+        }
+    }
+
+    &__nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 2rem;
+        background-color: $white;
+        height: 8.5rem;
+
+        @include respond(tab-port) {
+            display: none;
+        }
+
+        &--logo {
+            display: flex;
+            align-items: center;
+            margin-right: 1.6rem;
+            font-size: 2rem;
+
+            &--content {
+                display: flex;
+                align-items: center;
+                line-height: 1;
+                gap: .5rem;
+
+            }
+
+            &--icon {
+                font-size: 3.5rem;
+                color: $pink;
+            }
+
+            &--text {
+                font-size: 2rem;
+                font-weight: 900;
+                margin-bottom: 0;
+            }
+
+            &--subText {
+                color: $pink;
+                font-size: 1.3rem;
+                font-weight: 500;
+                display: block;
+            }
+        }
+
+        &--links {
+            display: flex;
+            flex-grow: 1;
+            justify-content: end;
+            align-items: center;
+            height: 100%;
+
+            &--content {
+                display: flex;
+                align-items: center;
+                justify-content: end;
+                width: 100%;
+            }
+
+            &--item {
+                height: 100%;
+                display: flex;
+                align-items: center;
+            }
+
+            &--link {
+                font-size: 1.5rem;
+                padding: 2.4rem 2rem;
+                color: $black;
+                font-weight: 500;
+            }
+
+            &--btn {
+                a {
+                    color: $white;
+                    border: 1px solid $pink;
+                    padding: 1.8rem;
+                    margin-top: 0.5rem;
+                    border-radius: 2px;
+                    transition: all .1s;
+
+                    &:hover {
+                        color: $black;
+                    }
+
+                }
+            }
+
+        }
+    }
+
+    &__hiddenNav {
+        display: none;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: column;
+        background-color: $black;
+        height: 8.5rem;
+
+        @include respond(tab-port) {
+            display: flex;
+        }
+
+        &--content {
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+        }
+
+        &--logo {
+            display: flex;
+            align-items: center;
+            margin-right: 1.6rem;
+            padding: 2.4rem 0;
+            font-size: 2rem;
+
+            &--content {
+                display: flex;
+                align-items: center;
+                line-height: 1;
+                gap: .5rem;
+
+            }
+
+            &--icon {
+                font-size: 3.5rem;
+                color: $green;
+            }
+
+            &--text {
+                font-size: 2rem;
+                font-weight: 900;
+                margin-bottom: 0;
+                color: $white;
+            }
+
+            &--subText {
+                color: $green;
+                font-size: 1.3rem;
+                font-weight: 500;
+                display: block;
+            }
+        }
+
+        &--btn {
+            background-color: transparent;
+            color: $dark-grey;
+            border: 0;
+            cursor: pointer;
+            text-transform: uppercase;
+            font-size: 2rem;
+            letter-spacing: .1em;
+        }
+
+
+        &--links {
+            display: none;
+            flex-grow: 1;
+            align-items: start;
+            min-height: 100vh;
+            z-index: 9999;
+            width: 100%;
+            padding: 5rem 11rem;
+            flex-direction: column;
+            background-color: $black;
+
+
+            @include respond(mobile) {
+                padding: 2rem 5rem;
+
+            }
+
+
+            &--content {
+                display: flex;
+                align-items: center;
+                justify-content: end;
+                width: 100%;
+            }
+
+            &--item {
+                height: 100%;
+                display: flex;
+                align-items: center;
+                font-size: 2rem;
+                width: 100%;
+
+                a {
+                    font-size: inherit;
+                }
+
+            }
+
+            &--link {
+                font-size: 1.6rem;
+                padding: 1.4rem 2rem;
+                color: $white;
+                font-weight: 500;
+            }
+
+            &--btn {
+                display: flex;
+                width: 100%;
+
+                a {
+                    width: 100%;
+                    color: $white;
+                    border: 1px solid $pink;
+                    padding: 1.8rem;
+                    margin-top: 0.5rem;
+                    border-radius: 2px;
+                    transition: all .1s;
+
+                    &:hover {
+                        color: $black;
+                    }
+
+                }
+            }
+
+        }
+    }
+
+    &__heroText {
+        padding: 6rem 2rem 0 2rem;
+        width: 50%;
+
+        @include respond(tab-land) {
+            padding-top: 4rem;
+        }
+
+        @include respond(tab-port2) {
+            width: 90%;
+            padding-top: 6rem;
+
+        }
+
+        @include respond(tab-port3) {
+            width: 100%;
+
+        }
+
+        &--content {
+            display: flex;
+            flex-direction: column;
+            gap: 2.4rem;
+
+            @include respond(tab-land) {
+                gap: 1.5rem;
+            }
+        }
+
+        &--heading {
+            font-size: 6rem;
+            color: $black;
+            line-height: 1;
+            font-weight: 700;
+
+            @include respond(tab-land) {
+                font-size: 4rem;
+            }
+
+            @include respond(tab-port2) {
+                font-size: 5rem;
+
+            }
+        }
+
+        &--paragraph {
+            font-size: 1.7rem;
+            font-size: 400;
+            margin-bottom: 2.4rem
+        }
+    }
+
+    &__cardSection {
+        padding: 4rem 2rem 0 2rem;
+        display: flex;
+        gap: 3rem;
+        justify-content: center;
+
+        @include respond(tab-port2) {
+            gap: 1rem;
+
+        }
+
+        @include respond(tab-port3) {
+            flex-direction: column;
+            gap: 2rem;
+            padding-top: 6rem;
+        }
+
+        &--card {
+            display: flex;
+            align-items: start;
+            background-color: $white;
+            border-radius: 4px;
+            gap: 2rem;
+            width: 100%;
+            padding: 2.5rem;
+            box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+            transition: all .1s;
+
+            @include respond(tab-port2) {
+                gap: 1rem;
+                padding: 1.5rem;
+            }
+
+            @include respond(tab-port3) {
+                gap: 2rem;
+                padding: 2rem;
+            }
+
+            &:hover {
+                background-color: $pink;
+            }
+
+            &:hover &--icon {
+                background-color: $white;
+            }
+
+            &:hover &--heading {
+                color: $white;
+            }
+
+            &:hover .paragraph {
+                color: $white;
+            }
+
+            &--icon {
+                background-color: $light-grey;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border-radius: 50%;
+                width: 12rem;
+                height: 8rem;
+
+                @include respond(tab-port2) {
+                    height: 6rem;
+                }
+
+                @include respond(tab-port3) {
+                    height: 4rem;
+                    width: 4rem;
+                }
+
+                &--text {
+                    font-size: 3rem;
+                    color: $pink;
+
+                    @include respond(tab-port2) {
+                        font-size: 2.5rem;
+                    }
+
+                    @include respond(tab-port3) {
+                        font-size: 2rem;
+                    }
+                }
+            }
+
+            &--heading {
+                font-size: 2rem;
+                font-weight: 700;
+                color: $black;
+                margin-bottom: 1rem;
+
+                @include respond(tab-port3) {
+                    font-size: 2.2rem;
+                    margin-bottom: 0;
+
+                }
+            }
+        }
+    }
+}
+@keyframes slideIn {
+    0% {
+        transform: translateX(100%);
+    }
+    
+    100% {
+        width: 100%;
+        transform: translateX(0);
+
+    }
+}
+@keyframes slideOut {
+    0% {
+        width: 100%;
+        transform: translateX(0);
+
+    }
+    
+    100% {
+        width: 0;
+        transform: translateX(100%);
+
+    }
+}
